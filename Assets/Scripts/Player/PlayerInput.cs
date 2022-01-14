@@ -6,14 +6,9 @@ public class PlayerInput : MonoBehaviour
 {
 	[SerializeField] internal PlayerBehaviour _playerBehaviour;
 	internal Vector2 playerInput;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void Update() {
-        playerInput.x = Input.GetAxisRaw("Horizontal");
+        playerInput.x = Input.GetAxis("Horizontal");
         
 	if(Input.GetButtonDown("Jump")) {	
 	_playerBehaviour._jump.Jump();	
@@ -24,5 +19,12 @@ public class PlayerInput : MonoBehaviour
 	if(Input.GetButtonUp("Sprint")) {
 		_playerBehaviour._movement.CancelSprint();
 	}
+	if(Input.GetButtonDown("Down")) {
+		_playerBehaviour._crouch.Crouch();
+	}
+	if(Input.GetButtonUp("Down")) {
+		_playerBehaviour._crouch.Crouch();
+	}
+
     }
 }
