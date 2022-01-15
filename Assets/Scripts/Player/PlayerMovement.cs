@@ -14,20 +14,20 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate() {
-	if(!running) {
-		speed = normalSpeed;
-    	}
-	_playerBehaviour.rb.velocity = new Vector2(_playerBehaviour._input.playerInput.x * speed * Time.deltaTime, _playerBehaviour.rb.velocity.y);
+		if(!running) {
+			speed = normalSpeed;
+		}
+		_playerBehaviour.rb.velocity = new Vector2(_playerBehaviour._input.playerInput.x * speed * Time.deltaTime, _playerBehaviour.rb.velocity.y);
     }
 
     internal void Sprint() {
-	running = true;
-	if(speed <= sprintSpeed) {
-		speed+= speedIncrement;
-	}
+		running = true;
+		if(speed <= sprintSpeed) {
+			speed+= speedIncrement;
+		}
     }
 
    internal void CancelSprint() {
-	running = false;
+		running = false;
    }
 }
