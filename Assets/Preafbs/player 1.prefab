@@ -173,7 +173,7 @@ MonoBehaviour:
   _movement: {fileID: 1111330062813076859}
   _crouch: {fileID: 7495325832069350112}
   _powerups: {fileID: -8059583324849373822}
-  _playerLife: {fileID: 0}
+  _playerLife: {fileID: 6163476690017021166}
 --- !u!114 &5693073822278137871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   gameObj: {fileID: 2093100673730800328}
-  restartTime: 3
+  restartTime: 0.89
 --- !u!61 &2093100673730800334
 BoxCollider2D:
   m_ObjectHideFlags: 0
