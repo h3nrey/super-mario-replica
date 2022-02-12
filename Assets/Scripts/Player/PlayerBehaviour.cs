@@ -24,11 +24,11 @@ public class PlayerBehaviour : MonoBehaviour
     public PlayerMovement _movement;
     [SerializeField] internal PlayerCrouching _crouch;
     [SerializeField] internal PlayerPowerUps _powerups;
+    [SerializeField] internal PlayerLife _playerLife;
 	
-    void Awake()
-    {
-	_jump = GetComponent<PlayerJump>();	
-	_movement = GetComponent<PlayerMovement>();
+    void Awake() {
+			_jump = GetComponent<PlayerJump>();	
+			_movement = GetComponent<PlayerMovement>();
     }
 
 }

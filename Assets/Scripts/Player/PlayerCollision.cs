@@ -27,6 +27,10 @@ public class PlayerCollision : MonoBehaviour
             _playerBehaviour._jump.canJump = true;
             _playerBehaviour._animation.SetBolleans(_playerBehaviour._animation.groundParam, true);
         }
+
+        if(other.gameObject.tag == "enemy") {
+		_playerBehaviour._playerLife.TakeDamage();
+	   }
     }
 
     private void OnCollisionExit2D(Collision2D other) {

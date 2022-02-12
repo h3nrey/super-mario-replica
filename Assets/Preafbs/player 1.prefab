@@ -120,12 +120,13 @@ GameObject:
   - component: {fileID: 7495325832069350112}
   - component: {fileID: -8059583324849373822}
   - component: {fileID: -8051590135109700742}
+  - component: {fileID: 6163476690017021166}
   - component: {fileID: 2093100673730800334}
   - component: {fileID: 2093100673730800329}
   - component: {fileID: -7206393007717415441}
   m_Layer: 0
   m_Name: player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 2093100673730800328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.02, y: -2.02, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.104380004, y: 0.104380004, z: 0.5219}
   m_Children:
   - {fileID: 1388355230}
   m_Father: {fileID: 0}
@@ -167,11 +168,12 @@ MonoBehaviour:
   playerTime: 400
   baseMode: 1
   _input: {fileID: 5693073822278137871}
-  _animation: {fileID: 0}
+  _animation: {fileID: -8051590135109700742}
   _jump: {fileID: 2093100673730800332}
   _movement: {fileID: 1111330062813076859}
   _crouch: {fileID: 7495325832069350112}
   _powerups: {fileID: -8059583324849373822}
+  _playerLife: {fileID: 0}
 --- !u!114 &5693073822278137871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 900
-  highJumpForce: 1100
-  lowJumpForce: 900
+  highJumpForce: 900
+  lowJumpForce: 700
   rayDistance: 0.1
   canJump: 0
 --- !u!114 &1111330062813076859
@@ -269,13 +271,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2e71a9681002a439b3ab276b71c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  groundParam: 
+  anim: {fileID: 1388355232}
+  groundParam: onFloor
   walkingParam: 
-  RunningParam: 
+  RunningParam: Running
   jumpingParam: 
-  speedParam: 
-  _playerBehaviour: {fileID: 0}
+  speedParam: speed
+  _playerBehaviour: {fileID: 2093100673730800322}
+--- !u!114 &6163476690017021166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093100673730800328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e301ee86bc132141a073484d0e28a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  gameObj: {fileID: 2093100673730800328}
+  restartTime: 3
 --- !u!61 &2093100673730800334
 BoxCollider2D:
   m_ObjectHideFlags: 0

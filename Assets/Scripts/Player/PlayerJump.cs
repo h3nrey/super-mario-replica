@@ -15,6 +15,9 @@ public class PlayerJump : MonoBehaviour
         _playerBehaviour = FindObjectOfType<PlayerBehaviour>();
     }
    
+    private void Start(){
+	setupJumpForce(lowJumpForce);
+    }
     // Update is called once per frame
     internal void Jump(){
        if(canJump)
