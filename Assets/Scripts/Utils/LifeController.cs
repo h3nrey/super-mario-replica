@@ -6,7 +6,6 @@ public class LifeController : MonoBehaviour {
     [SerializeField] int life = 1;
     int currentLife;
     [SerializeField] GameObject gameObj;
-    [SerializeField] bool isPlayer = false;
 
     void Start() {
         life = currentLife;

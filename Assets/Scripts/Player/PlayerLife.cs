@@ -8,6 +8,8 @@ public class PlayerLife : MonoBehaviour {
     [SerializeField] GameObject gameObj;
     [SerializeField] float restartTime= 3f;
 
+    [SerializeField] private PlayerBehaviour _player;
+
     void Start() {
         life = currentLife;
     }    
@@ -26,8 +28,8 @@ public class PlayerLife : MonoBehaviour {
     }
 
     IEnumerator RestartScene(){
-        print("mamaco");
         yield return new WaitForSeconds(restartTime);
+        PlayerStats.instance.savedPlayerLife --;
         SceneCaller.CallScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -12,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] internal Transform graphicChild;
     
     [Header("PlayerStats")]
+    public int playerScore = 0;
     public int playerCoins = 0;
     public int playerLife = 3;
     public int playerTime = 400;
@@ -25,10 +26,12 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] internal PlayerCrouching _crouch;
     [SerializeField] internal PlayerPowerUps _powerups;
     [SerializeField] internal PlayerLife _playerLife;
+    [SerializeField] internal PlayerStats _stats;
 	
     void Awake() {
-			_jump = GetComponent<PlayerJump>();	
-			_movement = GetComponent<PlayerMovement>();
+        _jump = GetComponent<PlayerJump>();	
+        _movement = GetComponent<PlayerMovement>();
+        playerLife = PlayerStats.instance.savedPlayerLife;
     }
 
 }
