@@ -6,6 +6,9 @@ public class LifeController : MonoBehaviour {
     [SerializeField] int life = 1;
     int currentLife;
     [SerializeField] GameObject gameObj;
+    [SerializeField] Collider2D coll;
+
+    [SerializeField] EnemiesAnimation _enemiesAnimation;
 
     void Start() {
         life = currentLife;
@@ -14,11 +17,14 @@ public class LifeController : MonoBehaviour {
         if(currentLife > 0) {
 	 	    currentLife -= damage;
 	    } else {
-		    DestroyMe(gameObj);
+		    StartCoroutine(DestroyMe(gameObj));
 	    }
     }
 
-    void DestroyMe(GameObject obj){
+    IEnumerator DestroyMe(GameObject obj){
+        // coll.enabled = false;
+        _enemiesAnimation.SetAnimationTriggers("hitted");
+        yield return new WaitForSeconds(0.3f);
 	    Destroy(obj);
     }
 }
