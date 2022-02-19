@@ -4,19 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour {
     [SerializeField] int life = 1;
-    int currentLife;
+    internal int currentLife;
     [SerializeField] GameObject gameObj;
     [SerializeField] float restartTime= 3f;
 
     [SerializeField] private PlayerBehaviour _player;
 
     void Start() {
-        life = currentLife;
+        currentLife = life;
     }    
 
     internal void TakeDamage(int damage = 1){
         if(currentLife > 0) {
 	 	    currentLife -= damage;
+            if(!_player.baseMode) {
+                _player._powerups.ReturnToBaseForm();
+            }
 	    } else {
 		    DestroyMe(gameObj);
 	    }

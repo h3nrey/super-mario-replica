@@ -22,7 +22,7 @@ public class LifeController : MonoBehaviour {
     }
 
     IEnumerator DestroyMe(GameObject obj){
-        // coll.enabled = false;
+        coll.enabled = false;
         _enemiesAnimation.SetAnimationTriggers("hitted");
         yield return new WaitForSeconds(0.3f);
 	    Destroy(obj);

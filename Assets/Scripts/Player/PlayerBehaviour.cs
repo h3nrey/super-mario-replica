@@ -26,7 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] internal PlayerCrouching _crouch;
     [SerializeField] internal PlayerPowerUps _powerups;
     [SerializeField] internal PlayerLife _playerLife;
-    [SerializeField] internal PlayerStats _stats;
+    //[SerializeField] internal PlayerStats _stats;
 	
     void Awake() {
         _jump = GetComponent<PlayerJump>();	

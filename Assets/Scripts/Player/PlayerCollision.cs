@@ -24,20 +24,20 @@ public class PlayerCollision : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "floor") {
-            _playerBehaviour._jump.canJump = true;
+            // _playerBehaviour._jump.canJump = true;
             _playerBehaviour._animation.SetBolleans(_playerBehaviour._animation.groundParam, true);
         }
 
         if(other.gameObject.tag == "enemy") {
-		_playerBehaviour._playerLife.TakeDamage();
+		       _playerBehaviour._playerLife.TakeDamage();
 	   }
     }
 
     private void OnCollisionExit2D(Collision2D other) {
-        if(other.gameObject.tag == "floor") {
-            _playerBehaviour._jump.canJump = false;
-            _playerBehaviour._animation.SetBolleans(_playerBehaviour._animation.groundParam, false);
-        }
+      if(other.gameObject.tag == "floor") {
+          // _playerBehaviour._jump.canJump = false;
+        _playerBehaviour._animation.SetBolleans(_playerBehaviour._animation.groundParam, false);
+      }
     }
     
 }

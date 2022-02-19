@@ -20,9 +20,15 @@ public class PlayerInput : MonoBehaviour
 		_playerBehaviour._animation.SetAnimationFloat(_playerBehaviour._animation.speedParam, Mathf.Abs(playerInput.x));
 		
 		//Jump
-		if(Input.GetButtonDown("Jump")) {	
-			_playerBehaviour._jump.Jump();	
-		}
+		if(Input.GetButtonDown("Jump"))	
+			_playerBehaviour._jump.Jump();		
+
+		if(Input.GetButton("Jump"))
+			_playerBehaviour._jump.Jump();
+
+		if(Input.GetButtonUp("Jump"))	
+			_playerBehaviour._jump.StoppingJumping();
+
 
 		//Sprint
 		if(Input.GetButton("Sprint")) {

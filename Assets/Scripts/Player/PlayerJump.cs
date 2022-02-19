@@ -5,29 +5,65 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     private PlayerBehaviour _playerBehaviour;
-    [SerializeField] float jumpForce; 
+
+    [Header("jumpingSettings")]
+    [SerializeField] private float jumpForce; 
     [SerializeField] internal float highJumpForce, lowJumpForce;
-    [SerializeField] float rayDistance;
+    [SerializeField] private float jumpTime;
+    private float jumpCounter;
+    private bool isJumping;
+
+    [Header("Ground Checking")]
+    [SerializeField] private Transform groundChecker;
+    private bool grounded;
+    [SerializeField] private LayerMask groundMask;
+    [Range(0.1f, 0.5f)][SerializeField] private float groundCheckerRange = 0.5f;
     public bool canJump;
 
-    void Awake()
-    {
+		[Header("Gizmos")]
+		[SerializeField] private Color32 corzinha;
+
+    void Awake() {
         _playerBehaviour = FindObjectOfType<PlayerBehaviour>();
     }
    
-    private void Start(){
-	setupJumpForce(lowJumpForce);
-    }
-    // Update is called once per frame
-    internal void Jump(){
-       if(canJump)
-       	 _playerBehaviour.rb.AddForce(Vector2.up * jumpForce);
-	print("pulou com essa força : " + jumpForce);
-    }
+	private void Start(){
+		setupJumpForce(lowJumpForce);
+	}
+    
+	private void Update() {
+		grounded = Physics2D.OverlapCircle(groundChecker.position, groundCheckerRange, groundMask);
+	}
+	internal void Jump(){
+		if(grounded) {
+			// _playerBehaviour.rb.AddForce(Vector2.up * jumpForce);
+			_playerBehaviour.rb.velocity = Vector2.up * jumpForce;
+			isJumping = true;
+			jumpCounter = jumpTime;
+		}	
+		else if(!grounded && isJumping){
+			if(jumpCounter > 0) {
+				// _playerBehaviour.rb.AddForce(Vector2.up * jumpForce);
+				_playerBehaviour.rb.velocity = Vector2.up * jumpForce;
+				jumpCounter -= Time.deltaTime;
+			}
+			else{
+				isJumping = false;
+			}
+		}
+	}
 
-    internal void setupJumpForce(float force){
-	jumpForce = force;
-    }
+	internal void StoppingJumping(){
+		isJumping = false;
+	}	
 
+	internal void setupJumpForce(float force){
+		jumpForce = force;
+	}
+
+	void OnDrawGizmosSelected() {
+		Gizmos.color = corzinha;
+		Gizmos.DrawWireSphere(groundChecker.position, groundCheckerRange);
+	}
 
 }
