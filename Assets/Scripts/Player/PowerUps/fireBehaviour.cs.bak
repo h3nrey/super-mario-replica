@@ -13,7 +13,7 @@ public class fireBehaviour : MonoBehaviour
 	rb.AddForce(Vector2.up * lauchForce);
    }	
     void FixedUpdate() {
-        rb.velocity = transform.right * horizontalForce * Time.deltaTime;
+        rb.velocity = new Vector2(transform.right * horizontalForce * Time.deltaTime, rb.velocity.y);
     }
 
     void OnCollision2D(Collision2D other) {

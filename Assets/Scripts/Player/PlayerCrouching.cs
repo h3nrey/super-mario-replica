@@ -16,10 +16,12 @@ public class PlayerCrouching : MonoBehaviour {
 		if(!_playerBehaviour.baseMode) {
 			if(isCrouching) {
 				_playerBehaviour._movement.enabled = true;
-				 _playerBehaviour.minorCollider.enabled = true;
-				 _playerBehaviour.majorCollider.enabled = false;
+				 _playerBehaviour.minorCollider.enabled = false;
+				 _playerBehaviour.majorCollider.enabled = true;
 				isCrouching = false;
 			} else {
+				_playerBehaviour.minorCollider.enabled = true;
+				 _playerBehaviour.majorCollider.enabled = false;
 				_playerBehaviour._movement.enabled = false;
 				isCrouching = true;	
 			}
