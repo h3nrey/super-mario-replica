@@ -10,6 +10,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float jumpForce; 
     [SerializeField] internal float highJumpForce, lowJumpForce;
     [SerializeField] private float jumpTime;
+	[SerializeField] private float lowFallingMultiplier, fallMultiplier;
     private float jumpCounter;
     private bool isJumping;
 
@@ -20,8 +21,8 @@ public class PlayerJump : MonoBehaviour
     [Range(0.1f, 0.5f)][SerializeField] private float groundCheckerRange = 0.5f;
     public bool canJump;
 
-		[Header("Gizmos")]
-		[SerializeField] private Color32 corzinha;
+	[Header("Gizmos")]
+	[SerializeField] private Color32 corzinha;
 
     void Awake() {
         _playerBehaviour = FindObjectOfType<PlayerBehaviour>();
@@ -31,8 +32,13 @@ public class PlayerJump : MonoBehaviour
 		setupJumpForce(lowJumpForce);
 	}
     
-	private void Update() {
+	private void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle(groundChecker.position, groundCheckerRange, groundMask);
+		if(_playerBehaviour.rb.velocity.y < 0)
+		_playerBehaviour.rb.gravityScale = fallMultiplier;
+		else if(_playerBehaviour.rb.velocity.y < 0){ 
+			_playerBehaviour.rb.gravityScale = lowFallingMultiplier;	
+		}
 	}
 	internal void Jump(){
 		if(grounded) {

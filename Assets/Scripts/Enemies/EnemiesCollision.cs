@@ -13,11 +13,11 @@ public class EnemiesCollision : MonoBehaviour
 
     [Header("Gizmos")]
 	[SerializeField] private Color32 corzinha;
-    // private void OnCollisionEnter2D(Collision2D other){
-    //     if(other.gameObject.tag == "Player"){
-            
-    //     }
-    // }
+     private void OnCollisionEnter2D(Collision2D other){
+         if(other.gameObject.tag == "fire"){
+            _life.TakeDamage();
+         }
+     }
 
     private void Update() {
         if(hitted)

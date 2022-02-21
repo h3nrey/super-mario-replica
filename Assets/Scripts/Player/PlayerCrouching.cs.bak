@@ -15,12 +15,12 @@ public class PlayerCrouching : MonoBehaviour {
 	internal void Crouch(){
 		if(!_playerBehaviour.baseMode) {
 			if(isCrouching) {
-				_playerBehaviour._movement.enabled = true;
+				_playerBehaviour._movement.enabled = false;
 				 _playerBehaviour.minorCollider.enabled = true;
 				 _playerBehaviour.majorCollider.enabled = false;
 				isCrouching = false;
 			} else {
-				_playerBehaviour._movement.enabled = false;
+				_playerBehaviour._movement.enabled = true;
 				isCrouching = true;	
 			}
 			_playerBehaviour._animation.SetBolleans("isCrounch",isCrouching);

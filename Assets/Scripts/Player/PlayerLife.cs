@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour {
     [SerializeField] int life = 1;
-    internal int currentLife;
+    [SerializeField] internal int currentLife;
     [SerializeField] GameObject gameObj;
     [SerializeField] float restartTime= 3f;
 
@@ -15,7 +15,8 @@ public class PlayerLife : MonoBehaviour {
     }    
 
     internal void TakeDamage(int damage = 1){
-        if(currentLife > 0) {
+        print("mamaco");
+        if(currentLife > 1) {
 	 	    currentLife -= damage;
             if(!_player.baseMode) {
                 _player._powerups.ReturnToBaseForm();

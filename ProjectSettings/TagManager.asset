@@ -11,6 +11,8 @@ TagManager:
   - coin
   - mushroom
   - enemy
+  - flower
+  - fire
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - UI
   - Player
   - Wall
-  - 
+  - Enemy
   - 
   - 
   - 

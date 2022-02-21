@@ -112,19 +112,19 @@ TextureImporter:
     second: CharactersSheet-export_35
   - first:
       213: 5847625011451472113
-    second: CharactersSheet-export_36
+    second: fire0
   - first:
       213: -3627743683172014753
-    second: CharactersSheet-export_37
+    second: fire1
   - first:
       213: -8666809246371717408
-    second: CharactersSheet-export_38
+    second: fire2
   - first:
       213: 7141941470811405720
-    second: CharactersSheet-export_39
+    second: fire3
   - first:
       213: -801876998367134724
-    second: CharactersSheet-export_40
+    second: white_idle
   - first:
       213: -8851841178914796817
     second: CharactersSheet-export_41
@@ -142,22 +142,22 @@ TextureImporter:
     second: CharactersSheet-export_45
   - first:
       213: -4671263970259717810
-    second: CharactersSheet-export_46
+    second: white_walk0
   - first:
       213: -106621369712198455
-    second: CharactersSheet-export_47
+    second: white_walk1
   - first:
       213: -3706488869344285133
-    second: CharactersSheet-export_48
+    second: white_walk2
   - first:
       213: 518508515123299092
-    second: CharactersSheet-export_49
+    second: white_damping
   - first:
       213: -1660725391689774067
-    second: CharactersSheet-export_50
+    second: white_jumping
   - first:
       213: 9204349785846999043
-    second: CharactersSheet-export_51
+    second: white_crouch
   - first:
       213: -1442591022783150064
     second: CharactersSheet-export_52
@@ -1135,7 +1135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharactersSheet-export_36
+      name: fire0
       rect:
         serializedVersion: 2
         x: 172
@@ -1156,7 +1156,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharactersSheet-export_37
+      name: fire1
       rect:
         serializedVersion: 2
         x: 182
@@ -1177,7 +1177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharactersSheet-export_38
+      name: fire2
       rect:
         serializedVersion: 2
         x: 192
@@ -1198,7 +1198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharactersSheet-export_39
+      name: fire3
       rect:
         serializedVersion: 2
         x: 202
@@ -1319,6 +1319,153 @@ TextureImporter:
       bones: []
       spriteID: 0ad9c71d0b3026a80800000000000000
       internalID: -8475207490794119776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_idle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb35c65e192fd4f0800000000000000
+      internalID: -801876998367134724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_walk0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41b6902b265c2fb0800000000000000
+      internalID: -4671263970259717810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_walk1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccb6dcdd64358ef0800000000000000
+      internalID: -106621369712198455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_walk2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e6bcad208ef8cc0800000000000000
+      internalID: -3706488869344285133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_damping
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41380f05fbc123700800000000000000
+      internalID: 518508515123299092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_jumping
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 40
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c0cde1e0be3f8e0800000000000000
+      internalID: -1660725391689774067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_crouch
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 40
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3086add0d5b6cbf70800000000000000
+      internalID: 9204349785846999043
       vertices: []
       indices: 
       edges: []

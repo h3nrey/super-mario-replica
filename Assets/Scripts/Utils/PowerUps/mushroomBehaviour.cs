@@ -18,7 +18,7 @@ public class mushroomBehaviour : MonoBehaviour
             rb.gravityScale = 0;
         }
     }
-    private void OnTriggerExit2D(Collision2D other) {
+    private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.layer == enemiesLayer) {
             coll.enabled = true;
             this.GetComponent<SimpleMovement>().enabled = true;

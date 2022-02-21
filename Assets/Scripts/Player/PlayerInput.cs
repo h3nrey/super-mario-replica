@@ -46,5 +46,10 @@ public class PlayerInput : MonoBehaviour
 			_playerBehaviour._crouch.Crouch();
 		}
 
+		//Fire
+		if(Input.GetButtonDown("Fire")){
+			StartCoroutine(_playerBehaviour._powerups.InstantiateFire());
+		}
+
     }
 }
