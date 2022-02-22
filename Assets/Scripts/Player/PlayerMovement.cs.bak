@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
 	[Range(1,5)] [SerializeField] float speedIncrement;
 	internal bool running = false;
 
+    void Start() {
+    }
+
+    // Update is called once per frame
     void FixedUpdate() {
 		if(!running) {
 			speed = normalSpeed;

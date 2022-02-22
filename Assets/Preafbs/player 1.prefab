@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &341008561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341008562}
+  m_Layer: 6
+  m_Name: shootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341008562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341008561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.04, y: 0.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2093100673730800323}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388355229
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +41,7 @@ GameObject:
   - component: {fileID: 1388355230}
   - component: {fileID: 1388355232}
   - component: {fileID: 1388355231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388355229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.41, z: 0}
+  m_LocalPosition: {x: 0, y: 0.42, z: 0}
   m_LocalScale: {x: 50.39476, y: 50.39476, z: 10.078952}
   m_Children: []
   m_Father: {fileID: 2093100673730800323}
@@ -103,6 +133,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1604372868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604372869}
+  m_Layer: 6
+  m_Name: GroundChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1604372869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604372868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2093100673730800323}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093100673730800328
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +184,7 @@ GameObject:
   - component: {fileID: 2093100673730800334}
   - component: {fileID: 2093100673730800329}
   - component: {fileID: -7206393007717415441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: player 1
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -143,6 +203,8 @@ Transform:
   m_LocalScale: {x: 0.104380004, y: 0.104380004, z: 0.5219}
   m_Children:
   - {fileID: 1388355230}
+  - {fileID: 1604372869}
+  - {fileID: 341008562}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,6 +225,7 @@ MonoBehaviour:
   majorCollider: {fileID: -7206393007717415441}
   playerSprite: {fileID: 1388355231}
   graphicChild: {fileID: 1388355230}
+  playerScore: 0
   playerCoins: 0
   playerLife: 3
   playerTime: 400
@@ -187,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBehaviour: {fileID: 2093100673730800322}
+  rotateAmount: 180
 --- !u!114 &2093100673730800333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec91c1baab71b47b3b309787cc7f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyCheckerRange: 0.362
+  corzinha:
+    serializedVersion: 2
+    rgba: 4278190080
 --- !u!114 &2093100673730800332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,11 +282,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340f8b95e85ead949ba79a265019b857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 900
-  highJumpForce: 900
-  lowJumpForce: 700
-  rayDistance: 0.1
+  jumpForce: 0
+  highJumpForce: 13
+  lowJumpForce: 10
+  jumpTime: 0.2
+  lowFallingMultiplier: 1.04
+  fallMultiplier: 2.79
+  groundChecker: {fileID: 1604372869}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckerRange: 0.197
   canJump: 0
+  corzinha:
+    serializedVersion: 2
+    rgba: 4283519999
 --- !u!114 &1111330062813076859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +340,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBehaviour: {fileID: 2093100673730800322}
+  fireProjectille: {fileID: 2508185760695816090, guid: f396f84d8be3dab47b122efec119d78a, type: 3}
+  shootPoint: {fileID: 341008562}
+  shootCooldown: 0.8
+  canShoot: 1
+  horizontalForce: 96.1
+  lauchForce: 40.9
 --- !u!114 &-8051590135109700742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,8 +378,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  currentLife: 0
   gameObj: {fileID: 2093100673730800328}
   restartTime: 0.89
+  _player: {fileID: 2093100673730800322}
 --- !u!61 &2093100673730800334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -306,7 +395,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09, y: 0}
+  m_Offset: {x: 0.089999914, y: 0.6838497}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -317,7 +406,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.59, y: 7.1}
+  m_Size: {x: 4.59, y: 6.4223747}
   m_EdgeRadius: 0
 --- !u!50 &2093100673730800329
 Rigidbody2D:
