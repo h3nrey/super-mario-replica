@@ -48,6 +48,11 @@ public class PlayerInput : MonoBehaviour
 		if(Input.GetButtonUp("Sprint")) {
 			_playerBehaviour._movement.CancelSprint();
 		}
+		
+		//Damping
+		if(Input.GetButtonUp("Horizontal")) {
+			_playerBehaviour._damping.CheckVelocity(_playerBehaviour.rb.velocity.x);
+		}
 
 		//Crouching
 		if(Input.GetButtonDown("Down")) {

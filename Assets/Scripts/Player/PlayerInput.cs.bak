@@ -22,7 +22,7 @@ public class PlayerInput : MonoBehaviour
 		// } 
 		
 		if (playerInput.x > 0.1f) {
-			transform.localRotation = Quaternion.Euler (0f, -rotateAmount, 0f);
+			transform.localRotation = Quaternion.Euler (0f, 0f, 0f);
         } else if(playerInput.x < -0.1f)  {
 			transform.localRotation = Quaternion.Euler (0f, rotateAmount, 0f);
         }
@@ -47,6 +47,10 @@ public class PlayerInput : MonoBehaviour
 		}
 		if(Input.GetButtonUp("Sprint")) {
 			_playerBehaviour._movement.CancelSprint();
+		}
+		
+		if(Input.GetButtonUp("Horizontal")) {
+			_playerBehaviour._damping.CheckVelocity(_playerBehaviour.rb.velocity.x);
 		}
 
 		//Crouching

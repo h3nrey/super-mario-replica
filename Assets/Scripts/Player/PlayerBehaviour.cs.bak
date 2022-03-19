@@ -24,7 +24,6 @@ public class PlayerBehaviour : MonoBehaviour
     public PlayerJump _jump;
     public PlayerMovement _movement;
     [SerializeField] internal PlayerCrouching _crouch;
-	[SerializeField] internal PlayerDamping _damping;
     [SerializeField] internal PlayerPowerUps _powerups;
     [SerializeField] internal PlayerLife _playerLife;
     //[SerializeField] internal PlayerStats _stats;

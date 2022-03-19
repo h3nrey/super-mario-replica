@@ -130,18 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 341008561, guid: 5d9e78bb1ad269d44becd72096ede609, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 341008562, guid: 5d9e78bb1ad269d44becd72096ede609, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 341008562, guid: 5d9e78bb1ad269d44becd72096ede609, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.86
-      objectReference: {fileID: 0}
     - target: {fileID: 2093100673730800323, guid: 5d9e78bb1ad269d44becd72096ede609, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2497,6 +2485,10 @@ PrefabInstance:
     - target: {fileID: 5730609028497259902, guid: 3def5b28857ef8c4e901ed01a26c8f5e, type: 3}
       propertyPath: m_Name
       value: flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730609028497259902, guid: 3def5b28857ef8c4e901ed01a26c8f5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3def5b28857ef8c4e901ed01a26c8f5e, type: 3}
