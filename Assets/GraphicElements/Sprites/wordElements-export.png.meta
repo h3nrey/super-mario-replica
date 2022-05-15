@@ -90,6 +90,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -640,6 +641,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      pipe: -6044825953713643414
+      winFlag: 3643435676908853710
+      MountainB: -7752546157681518894
+      stair_block: 7738063021906641306
+      wordElements-export_5: 7333720676228452974
+      normal_brick: -5252643507963878514
+      pipe_head: -8864764977456278290
+      wordElements-export_10: 4007502596427209206
+      dark_bloc: 915376637499276823
+      wordElements-export_13: 6355425091826601617
+      wordElements-export_3: 3762744764174557207
+      grassM: 5457423019538118664
+      castle: -5117570800277103636
+      dark_block: 6980626922647904939
+      cloudB: 94415533050096532
+      grassB: 201417512967783407
+      grassS: -1142657164400127117
+      cloudS: 2883836657273450918
+      cloudM: -105866298349098504
+      misteryBox: 8708118224830733333
+      normal_block: -7676901979398097341
+      Moutain: -6610939259627945222
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

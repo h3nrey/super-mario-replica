@@ -300,6 +300,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1480,6 +1481,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      CharactersSheet-export_45: -8475207490794119776
+      CharactersSheet-export_34: -71661730454465944
+      CharactersSheet-export_12: -6871904952138827636
+      CharactersSheet-export_11: -6493498052375927942
+      short_wak1: -5743513412710349538
+      big_run0: -4909941476185653545
+      white_walk2: -3706488869344285133
+      short_jump: 3463470632961164577
+      CharactersSheet-export_44: -4946363146227245429
+      big_jump: -2374039767262918339
+      white_walk0: -4671263970259717810
+      CharactersSheet-export_32: -7343686593395245387
+      big_walk2: 1569042961041531956
+      CharactersSheet-export_13: 5032100736837115148
+      fire1: -3627743683172014753
+      CharactersSheet-export_9: -3148563420229538514
+      big_walk0: -864019069074986913
+      CharactersSheet-export_23: 7584742109574463967
+      short_idle0: -6635183570991538454
+      white_crouch: 9204349785846999043
+      CharactersSheet-export_26: -2830655743061994086
+      CharactersSheet-export_8: 6248838214819281906
+      medium_idle: 4491865191472433061
+      white_idle: -801876998367134724
+      white_damping: 518508515123299092
+      CharactersSheet-export_42: 2746401774393684339
+      CharactersSheet-export_25: -843206227179290280
+      CharactersSheet-export_27: -2245856646378263446
+      fire2: -8666809246371717408
+      big_Crouching: -5567299112042572958
+      white_jumping: -1660725391689774067
+      CharactersSheet-export_14: -8446358763429849120
+      CharactersSheet-export_22: 6808639916315634716
+      CharactersSheet-export_10: 1838477984337081991
+      big_idle: 9020856282291143994
+      short_walk0: -1505557924291478159
+      CharactersSheet-export_31: 2200061888423963700
+      CharactersSheet-export_33: -7809844621728327474
+      short_run0: -3701698483899237726
+      fire0: 5847625011451472113
+      CharactersSheet-export_28: -1656329808232014954
+      white_walk1: -106621369712198455
+      CharactersSheet-export_43: -4846346210587490405
+      CharactersSheet-export_29: -8772761459925445595
+      fire3: 7141941470811405720
+      CharactersSheet-export_35: 4303962372535348781
+      big_walk1: 4925029237231733926
+      CharactersSheet-export_24: 433731176610037668
+      short_walk2: -8907208165980700541
+      CharactersSheet-export_41: -8851841178914796817
+      short_gameOver: 6106314028738761853
+      CharactersSheet-export_7: 8315388258223027601
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
