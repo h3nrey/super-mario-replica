@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField] internal PlayerBehaviour _playerBehaviour;
-  	[SerializeField] float normalSpeed, speed, sprintSpeed; 
+	[SerializeField] internal PlayerBehaviour _player;
+  	[SerializeField] float normalSpeed, sprintSpeed, startingSpeed;
+	[SerializeField] private float speed;
 	[Range(1,5)] [SerializeField] float speedIncrement;
-	internal bool running = false;
+	[SerializeField] internal bool running = false, walking = false;
 
-    void FixedUpdate() {
-		if(!running) {
-			speed = normalSpeed;
+    private void Update() {
+		if (_player._input.playerInput.x > 0.1 || _player._input.playerInput.x < -0.1) {
+			walk();
 		}
-		_playerBehaviour.rb.velocity = new Vector2(_playerBehaviour._input.playerInput.x * speed * Time.deltaTime, _playerBehaviour.rb.velocity.y);
+		if (walking == false && running == false) {
+			speed = startingSpeed;
+		}
+	}
+    void FixedUpdate() {		
+		_player.rb.velocity = new Vector2(_player._input.playerInput.x * speed * Time.deltaTime, _player.rb.velocity.y);
     }
 
     internal void Sprint() {
@@ -23,7 +29,23 @@ public class PlayerMovement : MonoBehaviour
 		}
     }
 
+	internal void walk() {
+		walking = true;
+		if (speed <= normalSpeed) {
+			speed += speedIncrement;
+		}
+	}
+
+	internal void stopPlayer() {
+		walking = false;
+	}
+
    internal void CancelSprint() {
+		while(speed > normalSpeed) {
+			speed -= speedIncrement;
+
+			if (speed == normalSpeed) break;
+        }
 		running = false;
    }
 }

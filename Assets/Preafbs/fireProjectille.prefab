@@ -49,10 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2508185760695816088}
-  horizontalForce: 100
-  lauchForce: 200
+  lauchForceHorizontal: 5
+  lauchForceVertical: 5
+  horizontalSpeed: 1
   vector: {x: 1, y: 0}
   reboucingTimes: 0
+  maxReboucingTimes: 0
 --- !u!212 &2508185760695816070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,7 +116,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2508185760695816090}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 24fceae3102cd80408f2757442fce35b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -146,7 +148,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 6200000, guid: 24fceae3102cd80408f2757442fce35b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

@@ -10,18 +10,13 @@ public class PlayerInput : MonoBehaviour
 	float rot;
 
     void Update() {
-        playerInput.x = Input.GetAxisRaw("Horizontal");
+        playerInput.x = Input.GetAxis("Horizontal");
         
-		// if(playerInput.x > 0.1f) {
-			// //_playerBehaviour.playerSprite.flipX = false;
-			// this.transform.Rotate(Vector3.up * 0, Space.World);
-		// }
-		// else if(playerInput.x < -0.1f) {
-			// // _playerBehaviour.playerSprite.flipX = true;
-			// this.transform.Rotate(Vector3.up * 180, Space.World);
-		// } 
-		
-		if (playerInput.x > 0.1f) {
+		if(playerInput.x == 0) {
+			_playerBehaviour._movement.stopPlayer();
+        }
+
+        if (playerInput.x > 0.1f) {
 			transform.localRotation = Quaternion.Euler (0f, 0f, 0f);
         } else if(playerInput.x < -0.1f)  {
 			transform.localRotation = Quaternion.Euler (0f, rotateAmount, 0f);

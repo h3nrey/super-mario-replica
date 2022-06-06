@@ -5,16 +5,17 @@ using UnityEngine;
 public class fireBehaviour : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float horizontalForce;
-    [SerializeField] private float lauchForce;
+    [SerializeField] private float lauchForceHorizontal, lauchForceVertical;
+    [SerializeField] private float horizontalSpeed;
     [SerializeField] private Vector2 vector;
-	[SerializeField] private int reboucingTimes;
+	[SerializeField] private int reboucingTimes, maxReboucingTimes;
 
     void Start() {
-		rb.AddForce(Vector2.up * lauchForce);
+		//rb.AddForce(Vector2.up * lauchForce);
+        rb.AddForce(new Vector2(lauchForceHorizontal, lauchForceVertical), ForceMode2D.Impulse);
    }	
     void FixedUpdate() {
-        // rb.velocity = transform.right * horizontalForce * Time.deltaTime;
+        rb.AddForce(horizontalSpeed * Time.fixedDeltaTime * transform.right);
     }
 
     void OnCollisionEnter2D(Collision2D other) {
@@ -23,24 +24,12 @@ public class fireBehaviour : MonoBehaviour
 		Destroy(this.gameObject);
       	// this.GetComponent<Collider2D>().isTrigger = true;
        }
-	   if(other.gameObject.tag != this.gameObject.tag) {
-		   print(reboucingTimes);
-		   if(reboucingTimes <= 4) 
-				reboucingTimes++;
-			else if(reboucingTimes > 4)
-				Destroy(this.gameObject);
-	   }
+        if (other.gameObject.tag != this.gameObject.tag) {
+            print(reboucingTimes);
+            if (reboucingTimes <= 8)
+                reboucingTimes++;
+            else if (reboucingTimes > 8)
+                Destroy(this.gameObject);
+        }
     }
-    
-    // void OnTriggerExit2D(Collider2D other) {
-		// if(other.gameObject.tag == "Player"){
-      		// this.GetComponent<Collider2D>().isTrigger = false;
-        // }
-    // }
-	
-	// void OnCollisionExit2D(Collision2D other) {
-		// if(other.gameObject.tag == "Player"){
-      		// this.GetComponent<Collider2D>().isTrigger = false;
-        // }
-    // }
 }
